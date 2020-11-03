@@ -1,6 +1,5 @@
 namespace DigitalLearningSolutions.Web.Tests.Controllers
 {
-    using System;
     using System.Security.Claims;
     using DigitalLearningSolutions.Data.Services;
     using DigitalLearningSolutions.Web.Controllers.LearningPortalController;

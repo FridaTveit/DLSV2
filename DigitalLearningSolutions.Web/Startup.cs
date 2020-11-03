@@ -3,7 +3,6 @@ namespace DigitalLearningSolutions.Web
     using System.Data;
     using System.IO;
     using System.Threading.Tasks;
-    using Dapper.FluentMap;
     using DigitalLearningSolutions.Data.Factories;
     using DigitalLearningSolutions.Data.Mappers;
     using DigitalLearningSolutions.Data.Services;
@@ -50,7 +49,14 @@ namespace DigitalLearningSolutions.Web
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy(CustomPolicies.UserOnly, policy => CustomPolicies.ConfigurePolicyUserOnly(policy));
+                options.AddPolicy(
+                    CustomPolicies.UserOnly,
+                    policy => CustomPolicies.ConfigurePolicyUserOnly(policy)
+                );
+                options.AddPolicy(
+                    CustomPolicies.FrameworkDeveloperOnly,
+                    policy => CustomPolicies.ConfigurePolicyFrameworkDeveloperOnly(policy)
+                );
             });
 
             services.ConfigureApplicationCookie(options => {

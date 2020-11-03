@@ -1,7 +1,6 @@
 ﻿namespace DigitalLearningSolutions.Web.Tests.Controllers
 {
     using System;
-    using DigitalLearningSolutions.Data.Models;
     using DigitalLearningSolutions.Web.Tests.TestHelpers;
     using DigitalLearningSolutions.Web.ViewModels.LearningPortal.Current;
     using FakeItEasy;
